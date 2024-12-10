@@ -96,42 +96,10 @@ const Header: React.FC = () => {
       <button className={styles.ctaButton} onClick={handleClick}>
         Whatsapp Us
       </button>
-      <div
-        className={styles.togglerBtn}
-        onClick={toggleMenu}
-        style={{
-          marginRight: "50px",
-          cursor: "pointer",
-
-          display: "flex",
-          flexDirection: "column",
-          gap: "3px",
-        }}
-      >
-        <div
-          style={{
-            width: "20px",
-            height: "4px",
-            backgroundColor: "black",
-            borderRadius: "4px",
-          }}
-        ></div>
-        <div
-          style={{
-            width: "20px",
-            height: "4px",
-            backgroundColor: "black",
-            borderRadius: "3px",
-          }}
-        ></div>
-        <div
-          style={{
-            width: "20px",
-            height: "4px",
-            backgroundColor: "black",
-            borderRadius: "3px",
-          }}
-        ></div>
+      <div className={styles.togglerBtn} onClick={toggleMenu}>
+        <div className={styles.chamchamchampa}></div>
+        <div className={styles.chamchamchampa}></div>
+        <div className={styles.chamchamchampa}></div>
       </div>
     </header>
   );

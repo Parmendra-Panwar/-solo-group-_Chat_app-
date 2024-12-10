@@ -12,6 +12,7 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
   z-index: 1000;
+  padding: 10px;
 }
 
 .header.scrolled {
@@ -125,14 +126,28 @@
 
 /* RESPONSIVE DESIGN */
 .togglerBtn {
+   margin-right: 50px;
+  cursor: pointer;
+  display: "flex";
+  flex-direction: "column";
+  gap: 3px;
   display: none;
 }
-
+.chamchamchampa{
+  width: 20px;
+  height: 4px;
+  background-color: black;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .nav {
     display: none;
   }
-
+  .chamchamchampa{
+    display: block;
+  }
   .togglerBtn {
     display: block;
     cursor: pointer;
