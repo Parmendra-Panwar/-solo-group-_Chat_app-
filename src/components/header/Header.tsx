@@ -100,13 +100,39 @@ const Header: React.FC = () => {
         className={styles.togglerBtn}
         onClick={toggleMenu}
         style={{
-          width: "20px",
-          height: "20px",
-          backgroundColor: "black",
           marginRight: "50px",
           cursor: "pointer",
+
+          display: "flex",
+          flexDirection: "column",
+          gap: "3px",
         }}
-      ></div>
+      >
+        <div
+          style={{
+            width: "20px",
+            height: "4px",
+            backgroundColor: "black",
+            borderRadius: "4px",
+          }}
+        ></div>
+        <div
+          style={{
+            width: "20px",
+            height: "4px",
+            backgroundColor: "black",
+            borderRadius: "3px",
+          }}
+        ></div>
+        <div
+          style={{
+            width: "20px",
+            height: "4px",
+            backgroundColor: "black",
+            borderRadius: "3px",
+          }}
+        ></div>
+      </div>
     </header>
   );
 };
