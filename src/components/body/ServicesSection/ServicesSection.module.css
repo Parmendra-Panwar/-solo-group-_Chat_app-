@@ -1,0 +1,58 @@
+.services {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+}
+
+.callNow {
+  background-color: #8c54ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.callNow:hover{
+  background-color: #6d32ec;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.service {
+  border: 1px solid #8c54ff;
+  color: #8c54ff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gullu{
+  width: 30%;
+}
+.servicesList{
+  width: 30%;
+  margin-left: 10px;
+  font-size: 0.7rem;
+} 
+
+@media (max-width: 768px) {
+  .services{
+    flex-direction: column;
+  }
+  .gullu{
+    width: 90%;
+  }
+  .servicesList{
+    width: 90%;
+  }
+  .service{
+    padding: 15px;
+  }
+  
+}

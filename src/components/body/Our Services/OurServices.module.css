@@ -1,0 +1,26 @@
+.services{
+  width: 100%;
+  background-color: rgb(252, 244, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h4{
+  margin: 0px;
+  margin-top: 30px;
+}
+h1{
+  margin: 0px;
+}
+p{
+  margin: 5px;
+  font-size: 0.8rem;
+}
+.servicesContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
