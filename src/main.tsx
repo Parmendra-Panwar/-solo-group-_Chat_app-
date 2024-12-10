@@ -9,7 +9,7 @@ import Contectus from "./components/body/contectUs/Contectus.tsx";
 import RequestCallback from "./components/body/RequestCallback/RequestCallback.tsx";
 import TestimonialSection from "./components/body/TestimonialSection/TestimonialSection.tsx";
 import WhyChooseUsSection from "./components/body/WhyChooseUsSection/WhyChooseUsSection.tsx";
-import Sppace from "./components/sppace.tsx";
+import Sppace from "./components/Sppace.tsx";
 
 const router = createBrowserRouter([
   {
