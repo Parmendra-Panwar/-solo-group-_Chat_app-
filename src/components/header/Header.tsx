@@ -1,25 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false); // State for mobile menu visibility
 
   let dropdownTimer: ReturnType<typeof setTimeout>;
 
-  // Handle header background on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Change state based on scroll position
-    };
+  const handleScroll = useCallback(() => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }, []);
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
-  // Mouse enter and leave handlers for dropdown
+  // Mouse enter and leave handlers for dropdown (desktop)
   const handleMouseEnter = () => {
     clearTimeout(dropdownTimer); // Clear any previous timeout
     setShowDropdown(true); // Show dropdown immediately
@@ -36,23 +41,32 @@ const Header: React.FC = () => {
     const message = encodeURIComponent("Hello, I need assistance!"); // Make sure the message is URL encoded
     window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
   };
+
+  const toggleMenu = () => {
+    setMenuVisible((prev) => !prev); // Toggle the menu visibility
+  };
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>Dream Planners Co</div>
-      <nav className={styles.nav}>
-        <a href="/" className={styles.link}>
+      <nav className={`${styles.nav} ${menuVisible ? styles.show : ""}`}>
+        <Link to="/" className={styles.link}>
           Home
-        </a>
+        </Link>
         <div
           className={styles.dropdown}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="/Services" className={styles.link}>
+          <Link to="/services" className={styles.link}>
             Services
-          </a>
-          {showDropdown && (
-            <ul className={`${styles.dropdownMenu} ${styles.fadeIn}`}>
+          </Link>
+          <div
+            className={`${styles.dropdownMenu} ${
+              showDropdown ? styles.showDropdown : ""
+            }`}
+          >
+            <ul>
               <li className={styles.dropdownItem}>
                 Wedding Planning & Management
               </li>
@@ -70,19 +84,29 @@ const Header: React.FC = () => {
               </li>
               <li className={styles.dropdownItem}>Event Essentials</li>
             </ul>
-          )}
+          </div>
         </div>
-        <a href="/ourwork" className={styles.link}>
+        <Link to="/ourwork" className={styles.link}>
           Our Work
-        </a>
-        <a href="Contact" className={styles.link}>
+        </Link>
+        <Link to="/contact" className={styles.link}>
           Contact
-        </a>
+        </Link>
       </nav>
       <button className={styles.ctaButton} onClick={handleClick}>
         Whatsapp Us
       </button>
-      <button className={styles.togglerBnt}>⬜</button>
+      <div
+        className={styles.togglerBtn}
+        onClick={toggleMenu}
+        style={{
+          width: "20px",
+          height: "20px",
+          backgroundColor: "black",
+          marginRight: "50px",
+          cursor: "pointer",
+        }}
+      ></div>
     </header>
   );
 };
