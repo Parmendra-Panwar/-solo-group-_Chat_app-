@@ -31,6 +31,11 @@ const Header: React.FC = () => {
     }, 300);
   };
 
+  const handleClick = () => {
+    const phoneNumber = "7067416638";
+    const message = encodeURIComponent("Hello, I need assistance!"); // Make sure the message is URL encoded
+    window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+  };
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>Dream Planners Co</div>
@@ -74,7 +79,9 @@ const Header: React.FC = () => {
           Contact
         </a>
       </nav>
-      <button className={styles.ctaButton}>Whatsapp Us</button>
+      <button className={styles.ctaButton} onClick={handleClick}>
+        Whatsapp Us
+      </button>
       <button className={styles.togglerBnt}>⬜</button>
     </header>
   );
