@@ -9,6 +9,8 @@ import Contectus from "./components/body/contectUs/Contectus.tsx";
 import RequestCallback from "./components/body/RequestCallback/RequestCallback.tsx";
 import TestimonialSection from "./components/body/TestimonialSection/TestimonialSection.tsx";
 import WhyChooseUsSection from "./components/body/WhyChooseUsSection/WhyChooseUsSection.tsx";
+import Sppace from "./components/sppace.tsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,12 +22,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/Services",
-        element: <OurServices />,
+        element: (
+          <>
+            <Sppace />
+            <OurServices />
+          </>
+        ),
       },
       {
         path: "/Contact",
         element: (
           <>
+            <Sppace />
             <Contectus />
             <RequestCallback />
           </>
@@ -35,12 +43,17 @@ const router = createBrowserRouter([
         path: "/ourwork",
         element: (
           <>
+            <Sppace />
             <TestimonialSection />
             <WhyChooseUsSection />
           </>
         ),
       },
     ],
+  },
+  {
+    path: "*",
+    element: <div>404</div>,
   },
 ]);
 

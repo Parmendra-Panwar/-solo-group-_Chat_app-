@@ -5,17 +5,20 @@ const testimonials = [
   {
     name: "Mihir Mittal",
     text: "Anshul and his team's flawless management made our celebration stress-free. Their personalized planning and warm hospitality were exceptional. Thank you for an amazing experience!",
-    avatar: "/path/to/avatar1.png",
+    avatar:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOeZjZWEr4oFmJhILQQgTy7-WUX9BmRrAAFw&s",
   },
   {
     name: "Riya Sharma",
     text: "Evoke Event & Wedding Planners exceeded our expectations! From stunning decorations to smooth event execution, they made our special day truly unforgettable.",
-    avatar: "/path/to/avatar2.png",
+    avatar:
+      "https://media.istockphoto.com/id/1388648617/photo/confident-caucasian-young-man-in-casual-denim-clothes-with-arms-crossed-looking-at-camera.jpg?s=612x612&w=0&k=20&c=YxctPklAOJMmy6Tolyvn45rJL3puk5RlKt39FO46ZeA=",
   },
   {
     name: "Kunal Verma",
     text: "Their professionalism and creativity were outstanding. Every detail was handled perfectly. Highly recommend their services!",
-    avatar: "/path/to/avatar3.png",
+    avatar:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvzqC0Yk2EdPxA71JDBtbYuKdmmbmvU8mi1Q&s",
   },
 ];
 

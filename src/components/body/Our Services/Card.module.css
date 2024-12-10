@@ -1,54 +1,67 @@
-.services{
+/* Card Component */
+.service {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Image Styling: Ensuring image fills the card */
+.service img {
   width: 100%;
-  background-color: rgb(252, 244, 255);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
+  height: 300px; /* Keeps the image size consistent */
+  object-fit: cover; /* Ensures the image fills the space without overflowing */
 }
-h4{
-  margin: 0px;
-  margin-top: 3px;
+
+/* Title at the bottom of the card */
+.service .datas {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background to make text readable */
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%); /* Hide by default */
 }
-h2{
-  margin: 0px;
+
+/* Show the description and button on hover */
+.service:hover .datas {
+  transform: translateY(0); /* Slide up to show on hover */
 }
-p{
-  margin: 5px;
-  font-size: 0.8rem;
+
+.datas h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
-img{
-  height: 300px;
-  width: 270px;
-  border-radius: 12px;
+
+.datas p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+  color: #d9d9d9;
 }
-.service{
-  width: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 40px;
-  border-radius: 12px;
+
+/* Button Styling */
+.datas button {
+  background-color: rgb(54, 54, 255);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-img:hover{
-  transform: scale(1.03);
-  opacity: 0.8;
-  transition: all 1s ease;
-}
-.service:hover{
-  background-color: rgb(0, 0, 0);
-  transition: all 1s ease;
-}
-.datas{
-  position:absolute;
-  width: 270px;
-  margin-top: 170px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: aliceblue;
-  padding: 30px;
+
+.datas button:hover {
+  background-color: rgb(44, 44, 220);
 }

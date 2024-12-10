@@ -54,12 +54,13 @@ li {
 }
 
 a {
-  color:#8c54ff;
+  color: #000000;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  scale: 1.1;
 }
 
 .socialIcons {
@@ -68,20 +69,6 @@ a:hover {
   margin-top: 1rem;
 }
 
-.icon {
-  display: inline-block;
-  font-size: 1.5rem;
-  background-color: #ffccff;
-  color: #4a004a;
-  padding: 0.5rem;
-  border-radius: 50%;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.icon:hover {
-  background-color: #fff;
-  color: #4a004a;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -97,4 +84,11 @@ a:hover {
   .socialIcons {
     justify-content: center;
   }
+}
+.socialIcons{
+  color: black;
+}
+.orsr{
+  
+  color: #8c54ff;
 }

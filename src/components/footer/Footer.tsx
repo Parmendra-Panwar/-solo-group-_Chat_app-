@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
@@ -23,32 +26,45 @@ const Footer: React.FC = () => {
           <h3 className={styles.heading}>Quick Links</h3>
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <a href="/">Home</a>
             </li>
-            <li>
-              <a href="/about">About Us</a>
-            </li>
+
             <li>
               <a href="/services">Services</a>
             </li>
-            <li>
-              <a href="/faq">FAQ</a>
-            </li>
+
             <li>
               <a href="/contact">Contact Us</a>
+            </li>
+            <li>
+              <a href="/ourwork">Our Work</a>
             </li>
           </ul>
         </div>
 
         {/* Services */}
         <div className={styles.services}>
-          <h3 className={styles.heading}>Our Services</h3>
+          <h3 className={styles.heading}>
+            <a href="/services" className={styles.orsr}>
+              Our Services
+            </a>{" "}
+          </h3>
           <ul>
-            <li>Wedding Planning</li>
-            <li>Corporate Events</li>
-            <li>Birthday Parties</li>
-            <li>Event Styling</li>
-            <li>Venue Selection</li>
+            <li>
+              <a href="/services">Wedding Planning</a>
+            </li>
+            <li>
+              <a href="/services">Corporate Events</a>
+            </li>
+            <li>
+              <a href="/services">Birthday Parties</a>
+            </li>
+            <li>
+              <a href="/services">Event Styling</a>
+            </li>
+            <li>
+              <a href="/services">Venue Selection</a>
+            </li>
           </ul>
         </div>
 
@@ -56,26 +72,23 @@ const Footer: React.FC = () => {
         <div className={styles.contactInfo}>
           <h3 className={styles.heading}>Contact Us</h3>
           <p>
-            <strong>Address:</strong> 123 Dream Lane, Bhopal, MP, India
+            <strong>Address:</strong> 223 Bhopal, MP, India
           </p>
           <p>
-            <strong>Phone:</strong> +91 9876543210
+            <strong>Phone:</strong> +91 98---------
           </p>
           <p>
             <strong>Email:</strong> info@dreamplanners.com
           </p>
           <div className={styles.socialIcons}>
-            <a href="#" className={styles.icon}>
-              🔗
+            <a href="https://www.instagram.com/paras.panwar.davm/">
+              <FaInstagramSquare size={40} />
             </a>
-            <a href="#" className={styles.icon}>
-              🔗
+            <a href="https://www.linkedin.com/in/parmendr-panwar/">
+              <FaLinkedin size={40} />
             </a>
-            <a href="#" className={styles.icon}>
-              🔗
-            </a>
-            <a href="#" className={styles.icon}>
-              🔗
+            <a href="https://x.com/Parmendra444">
+              <FaXTwitter size={40} />
             </a>
           </div>
         </div>

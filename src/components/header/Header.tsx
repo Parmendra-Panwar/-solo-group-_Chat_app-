@@ -35,7 +35,7 @@ const Header: React.FC = () => {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>Dream Planners Co</div>
       <nav className={styles.nav}>
-        <a href="#home" className={styles.link}>
+        <a href="/" className={styles.link}>
           Home
         </a>
         <div
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <a href="#services" className={styles.link}>
+          <a href="/Services" className={styles.link}>
             Services
           </a>
           {showDropdown && (
@@ -67,16 +67,10 @@ const Header: React.FC = () => {
             </ul>
           )}
         </div>
-        <a href="#work" className={styles.link}>
+        <a href="/ourwork" className={styles.link}>
           Our Work
         </a>
-        <a href="#blogs" className={styles.link}>
-          Blogs
-        </a>
-        <a href="#about" className={styles.link}>
-          About
-        </a>
-        <a href="#contact" className={styles.link}>
+        <a href="Contact" className={styles.link}>
           Contact
         </a>
       </nav>
